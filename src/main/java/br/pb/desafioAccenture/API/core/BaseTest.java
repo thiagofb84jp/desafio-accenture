@@ -1,4 +1,4 @@
-package br.pb.desafioAccenture.core;
+package br.pb.desafioAccenture.API.core;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;

@@ -1,6 +1,6 @@
 # Projeto de Testes Automatizados com REST-Assured
 
-## Desafio técnico de QE para o Sicredi
+## Desafio técnico de QA para a Accenture
 
 Este projeto implementa testes automatizados para APIs RESTful utilizando a biblioteca **REST-Assured**. A estrutura do projeto foi desenvolvida em **Java 17** e utiliza **JUnit 4.12** como framework de testes. Além disso, são usadas as bibliotecas **GSON** para manipulação de JSON e **JSON Schema Validator** para validação de esquemas JSON.
 
@@ -104,7 +104,7 @@ A estrutura do projeto segue o padrão Maven, com os diretórios separados para 
 ## Como executar os testes
 1. Clone este repositório na sua máquina local:
 ``` bash
-git clone https://gitlab.com/quality-engineer1/desafio-sicredi.git
+git clone <colocar-link-aqui-github-accenture>
 ```
 2. Importe o projeto na sua IDE (exemplo: IntelliJ IDEA).
 3. Compile e execute os testes localizando o arquivo `SuiteTest.java`:

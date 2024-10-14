@@ -1,19 +1,16 @@
-package br.pb.desafioAccenture.test;
+package br.pb.desafioAccenture.API.test;
 
-import br.pb.desafioAccenture.core.APILinks;
-import br.pb.desafioAccenture.core.BaseTest;
-import br.pb.desafioAccenture.dto.UsuarioDTO;
-import br.pb.desafioAccenture.utils.UsuarioUtils;
-import org.hamcrest.Matchers;
+import br.pb.desafioAccenture.API.core.APILinks;
+import br.pb.desafioAccenture.API.core.BaseTest;
+import br.pb.desafioAccenture.API.dto.UsuarioDTO;
 import org.junit.*;
 import org.junit.runners.MethodSorters;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
 
-import static br.pb.desafioAccenture.utils.UsuarioUtils.*;
+import static br.pb.desafioAccenture.API.utils.UsuarioUtils.*;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 

@@ -1,9 +1,7 @@
-package br.pb.desafioAccenture.dto;
+package br.pb.desafioAccenture.API.dto;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class UsuarioDTO {
 

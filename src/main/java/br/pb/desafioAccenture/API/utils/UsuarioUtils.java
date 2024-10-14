@@ -1,7 +1,7 @@
-package br.pb.desafioAccenture.utils;
+package br.pb.desafioAccenture.API.utils;
 
-import br.pb.desafioAccenture.core.APILinks;
-import br.pb.desafioAccenture.dto.UsuarioDTO;
+import br.pb.desafioAccenture.API.core.APILinks;
+import br.pb.desafioAccenture.API.dto.UsuarioDTO;
 
 import java.util.ArrayList;
 import java.util.HashMap;

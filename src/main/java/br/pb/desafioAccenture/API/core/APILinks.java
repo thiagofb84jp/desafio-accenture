@@ -1,4 +1,4 @@
-package br.pb.desafioAccenture.core;
+package br.pb.desafioAccenture.API.core;
 
 public class APILinks {
     public static final String USER = "/Account/v1/User";

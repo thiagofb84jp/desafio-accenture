@@ -1,4 +1,4 @@
-package br.pb.desafioAccenture.core;
+package br.pb.desafioAccenture.API.core;
 
 import io.restassured.http.ContentType;
 
