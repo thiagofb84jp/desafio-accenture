@@ -1,18 +1,27 @@
 # Projeto de Testes Automatizados com REST-Assured
 
-## Desafio técnico de QA para a Accenture
+## Desafio Accenture - API Testes Automatizados
 
-Este projeto implementa testes automatizados para APIs RESTful utilizando a biblioteca **REST-Assured**. A estrutura do projeto foi desenvolvida em **Java 17** e utiliza **JUnit 4.12** como framework de testes. Além disso, são usadas as bibliotecas **GSON** para manipulação de JSON e **JSON Schema Validator** para validação de esquemas JSON.
+Este projeto foi desenvolvido para o desafio da Accenture, com foco em testes automatizados de APIs utilizando **Rest-Assured** e **JUnit**. 
+O objetivo é garantir a validação de respostas de APIs, incluindo verificação de esquemas JSON e outros tipos de validação.
 
-
-## Requisitos
+## Tecnologias Utilizadas
 
 Certifique-se de que seu ambiente de desenvolvimento atende aos seguintes requisitos:
 
-- **Java 17** (ou superior)
+- **Java** (versão 17)
+- **Rest-Assured** (versão 5.3.0)
+- **JUnit** (versão 4.13.2)
+- **Gson** (versão 2.10)
+- **JAXB** para manipulação de XML (versão 2.3.1)
 - **IntelliJ IDEA 2023.2.2 (Community Edition)** (ou outra IDE de sua preferência)
 - **Maven** (ou Gradle, dependendo do seu gerenciador de dependências)
 - **Git** (opcional, para controle de versão)
+
+## Configurações do Projeto
+
+- **JDK 17** instalado.
+- **Maven** para gerenciamento de dependências.
 
 ## Dependências Utilizadas
 
@@ -22,63 +31,20 @@ As principais dependências do projeto são:
 - **JUnit 4.13.2**: Framework para estruturação e execução dos testes.
 - **Google Code GSON 2.10**: Para serialização e desserialização de objetos JSON.
 - **JSON Schema Validator 5.1.1**: Para validação de respostas JSON utilizando schemas.
+- **JAXB**: Biblioteca para manipulação de XML.
 
-### Gerenciador de Dependências (Maven)
+As dependências estão configuradas no arquivo pom.xml. Para instalar todas as dependências, execute o comando Maven:
 
-No arquivo `pom.xml`, as dependências podem ser adicionadas como:
-
-```xml 
-<dependencies>
-    <!-- REST-Assured -->
-    <dependency>
-        <groupId>io.rest-assured</groupId>
-        <artifactId>rest-assured</artifactId>
-        <version>5.3.0</version>
-        <scope>test</scope>
-    </dependency>
-
-    <!-- JUnit -->
-    <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.13.2</version>
-        <scope>test</scope>
-    </dependency>
-
-    <!-- GSON -->
-    <dependency>
-        <groupId>com.google.code.gson</groupId>
-        <artifactId>gson</artifactId>
-        <version>2.10</version>
-    </dependency>
-    
-    <!-- JAXB API -->
-    <dependency>
-        <groupId>org.glassfish.jaxb</groupId>
-        <artifactId>jaxb-runtime</artifactId>
-        <version>2.3.1</version>
-        <scope>runtime</scope>
-    </dependency>
-
-    <!-- JAXB API -->
-    <dependencies>
-        <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-            <version>2.3.1</version>
-        </dependency>
-    
-    <!-- JSON Schema Validator -->
-    <dependency>
-        <groupId>com.github.java-json-tools</groupId>
-        <artifactId>json-schema-validator</artifactId>
-        <version>5.1.1</version>
-    </dependency>
-</dependencies>
+```bash
+mvn clean install
 ```
 
 ## Estrutura do Projeto
+
 A estrutura do projeto segue o padrão Maven, com os diretórios separados para código fonte e testes:
+
+- **src/test/java**: Contém os casos de teste automatizados utilizando Rest-Assured e JUnit.
+- **src/main/resources**: Contém os recursos e configurações utilizadas durante a execução dos testes.
 
 ```
 /CursoRest/
@@ -90,72 +56,18 @@ A estrutura do projeto segue o padrão Maven, com os diretórios separados para 
                     |-- thiagofb84jp
                         |-- core
                         |-- dto
-                        |-- suite
                         |-- test
+                        |-- utils
         |-- resources
-            |-- 01 - plano-testes
-            |-- 02 - caso-testes
-            |-- 03 - reportes
-            |-- XX - pictures                   
 |-- pom.xml
 |-- README.md
 ```
 
-## Como executar os testes
-1. Clone este repositório na sua máquina local:
-``` bash
-git clone <colocar-link-aqui-github-accenture>
-```
-2. Importe o projeto na sua IDE (exemplo: IntelliJ IDEA).
-3. Compile e execute os testes localizando o arquivo `SuiteTest.java`:
-4. Os resultados dos testes serão exibidos no console da IDE.
+## Links Importantes:
 
-## Exemplos de Testes
-Aqui está um exemplo simples de teste de API utilizando REST-Assured e JUnit:
-
-``` java
-import io.restassured.RestAssured;
-import org.junit.Test;
-
-import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.*;
-
-public class ApiTest {
-
-    @Test
-    public void validarStatusCode() {
-        RestAssured.baseURI = "https://api.exemplo.com";
-        
-        given().
-        when().
-            get("/endpoint").
-        then().
-            assertThat().
-            statusCode(200);
-    }
-}
-```
-
-## Planos e Casos de Testes
-Este projeto possui:
-- Plano de Teste;
-- Casos de Testes:
-  - Usuários;
-  - Produtos.
-- Reportes.
-- Imagens/screenshots.
-
-Para maiores informações, verificar os arquivos contidos dentro da pasta /resources. 
-
-## Licença
-Este projeto é licenciado sob a MIT License - consulte o arquivo LICENSE para mais detalhes.
+- Projeto no Github: https://github.com/thiagofb84jp/desafio-accenture-api
 
 
-### O que está incluído:
-- **Introdução** sobre o propósito do projeto.
-- **Requisitos** para preparar o ambiente de desenvolvimento.
-- **Dependências utilizadas**, com exemplos de como incluí-las em um projeto Maven.
-- **Estrutura do projeto**, ilustrando onde o código e testes ficam organizados.
-- **Instruções de execução** para rodar os testes.
-- **Exemplo de teste** usando REST-Assured com JUnit.
-- **Licença** (opcional).
+## Contribuição:
+
+Sinta-se à vontade para abrir issues ou enviar pull requests caso encontre algo que possa ser melhorado ou corrigido.
